@@ -1,0 +1,135 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    line-height: 1.5;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #081030;
+}
+
+h1 {
+    font-size: 34px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.btn {
+    font-size: 21px;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 10%;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-image: linear-gradient(180deg, #39b7c8 0%, #131b5e 100%);
+}
+
+.container {
+    height: 100%;
+    background-image: linear-gradient(180deg, #37b0c3 0%, #162566 100%);
+    padding: 20px;
+}
+
+.container-item {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.header-box img {
+    height: 75px;
+}
+
+.header-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.description-item img {
+    width: 18%;
+}
+
+.banner_mermaid {
+    margin: 150px 0 50px 0;
+}
+
+.banner_mermaid-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner_mermaid--overview{
+    max-width: 40%;
+    text-align: right;
+}
+
+.banner_mermaid-item img {
+    width: 480px;
+    margin-top: -130px;
+}
+
+.banner_fish .container {
+    background-image: url('/images/banners/fish.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner_fish-item {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.advantages {
+    text-align: center;
+    max-width: 1140px;
+    margin: 20px auto;
+}
+
+.advantages-item {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    display: grid;
+}
+
+/* game.html */
+iframe {
+    border: none;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
