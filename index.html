@@ -9,7 +9,7 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="page-wrapper">
+	<div class="page-wrapper" id="pageContent">
 		<header>
 			<div class="container">
 				<div class="container-item">
@@ -181,17 +181,29 @@
 				</div>
 			</div>
 		</footer>
-	</div>
-	<div class="fixed-cookie">
-		<div id="cookiePopup">
+
+		<div id="cookieNotice" class="cookie-notice">
 			<p>
-				Наш сайт использует файлы cookie для обеспечения удобства просмотра и
-				соответствующую информацию. Прежде чем продолжить использование нашего сайта, вы соглашаетесь и
-				принимаете наш <a href="/privacy/">Политика использования файлов cookie и конфиденциальность.</a>
+				We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies.
 			</p>
-			<button id="acceptCookie">Согласиться</button>
+			<button id="acceptCookies">
+				<img src="images/icons/cookies-button.svg" alt="cookies">
+				Accept
+			</button>
 		</div>
 	</div>
+
+	<div id="ageModal" class="modal">
+		<div class="modal-content">
+			<h3>Do you confirm that you are over 18 years old?</h3>
+			<img src="images/icons/adult.svg" alt="">
+			<div class="modal-controls">
+				<button class="btn btn-primary" id="confirmAge">Yes</button>
+				<button class="btn btn-danger" id="declineAge">No</button>
+			</div>
+		</div>
+	</div>
+
 </body>
 <script src="js/index.js"></script>
 </html>
