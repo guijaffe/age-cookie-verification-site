@@ -3,6 +3,7 @@
     line-height: 1.5;
     color: #FFFFFF;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -75,8 +76,9 @@ a:hover {
     gap: 20px;
 }
 
-.description-item img {
+.privacy-item img {
     width: 18%;
+
 }
 
 .banner_mermaid {
@@ -87,23 +89,22 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.banner_mermaid--overview{
+.banner_mermaid--overview {
     max-width: 40%;
     text-align: right;
 }
 
 .banner_mermaid-item img {
-    width: 480px;
     margin-top: -130px;
+    max-width: 468px;
+    width: 100%;
 }
 
 .banner_fish .container {
-    background-image: url('/images/banners/fish.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('/images/banners/fish.png') center / cover no-repeat;
 }
 
 .banner_fish-item {
@@ -111,17 +112,96 @@ a:hover {
     padding: 50px 0;
 }
 
-.advantages {
+.blog{
     text-align: center;
     max-width: 1140px;
     margin: 20px auto;
 }
 
-.advantages-item {
+.blog-item {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     display: grid;
 }
+
+.cookie-item img {
+    width: 18%;
+}
+
+.cookie-item {
+    background: url('/images/icons/cookies.png') right / contain no-repeat;
+    padding: 20px 0;
+}
+
+/* burger-menu */
+.header-controls-burger {
+    display: none;
+}
+
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+}
+
+#burger-toggle {
+    display: none;
+}
+
+#burger-toggle-footer {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    transform: translate(-35%);
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    padding: 0;
+}
+
+#burger-toggle:checked + .burger + .menu,
+#burger-toggle-footer:checked + .burger + .menu {
+    max-height: 500px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li a:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 1024px) {
+    .banner_mermaid--overview {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-item {
+        grid-template-columns: 1fr;
+    }
+
+    .header-controls {
+        display: none;
+    }
+
+    .header-controls-burger {
+        display: block;
+    }
+}
+
 
 /* game.html */
 iframe {
