@@ -12,18 +12,18 @@ const modalConfirmed = () => {
 		pageContent.style.display = 'none';
 	}
 
-	confirmButton.onclick = function() {
+	confirmButton.addEventListener('click', function () {
 		sessionStorage.setItem('ageConfirmed', 'true');
 		modal.style.display = 'none';
 		pageContent.style.display = 'block';
 		console.log('Возраст подтвержден');
-	};
+	});
 
-	declineButton.onclick = function() {
+	declineButton.addEventListener('click', function() {
 		modal.style.display = 'none';
 		window.location.href = 'https://www.disney.com/';
 		console.log('Возраст не подтвержден');
-	};
+	});
 };
 
 const cookieWarning = () => {
@@ -35,7 +35,6 @@ const cookieWarning = () => {
 	} else {
 		cookieNotice.style.display = 'flex';
 	}
-
 	acceptButton.addEventListener('click', function () {
 		sessionStorage.setItem('cookiesAccepted', 'true');
 		cookieNotice.style.display = 'none';
